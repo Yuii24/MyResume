@@ -105,10 +105,27 @@ p {
   align-items: center;
   /* 垂直置中 */
   width: 100%;
-  padding: 10px 20px;
+  padding-bottom: 20px;
 
   /* text-align: start;
   margin-bottom: 10px; */
+}
+
+.img-name {
+  display: flex;
+  /* justify-content: space-between; */
+  /* 讓左邊和右邊對齊 */
+  align-items: center;
+  /* 垂直置中 */
+  width: 100%;
+  padding-bottom: 20px;
+
+  /* text-align: start;
+  margin-bottom: 10px; */
+}
+
+.name {
+  margin-left: 20px;
 }
 
 .title {
