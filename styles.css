@@ -50,7 +50,7 @@ h2 {
 h3 {
   font-size: 21px;
   margin: 0 0 8px;
-  font-width: 500;
+  font-weight: 500;
 }
 
 section {
@@ -58,25 +58,33 @@ section {
 }
 
 p {
-  color: #666666;
-}
-
-/* .avatar {
-  text-align: center;
+  color: black;
 }
 
 .avatar-img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-} */
+}
+
+/* 讓左邊（名字+職稱）與右邊（社交媒體）對齊 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* 讓左右兩邊貼齊 */
+  align-items: center;
+  /* 讓內容垂直對齊 */
+  width: 100%;
+  padding: 10px 20px;
+}
+
 
 /*新增效果:觸碰變色*/
 .name {
   display: inline;
   /*justify-content: center;*/
   font-size: 32px;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   background: linear-gradient(90deg, #ff3c41, #fc0, #0ebeff);
   background-size: 0 3px;
   background-repeat: no-repeat;
@@ -87,35 +95,62 @@ p {
 
 .name:hover {
   background-size: 100% 3px;
-  color: red;
+  color: blue;
 }
 
-.name-scarlet {
-  text-align: start;
-  margin-bottom: 10px;
-}
+.name-title {
+  display: inline-flex;
+  justify-content: space-between;
+  /* 讓左邊和右邊對齊 */
+  align-items: center;
+  /* 垂直置中 */
+  width: 100%;
+  padding: 10px 20px;
 
-.social-media {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.social-media-link {
-  color: #999999;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.social-media-link:hover {
-  color: #ff6600;
+  /* text-align: start;
+  margin-bottom: 10px; */
 }
 
 .title {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #ff6600;
-  font-size: 14px;
-  letter-spacing: 2px;
+  margin-left: 5px;
+  /* 調整名稱與 Title 之間的間距 */
+  font-size: 18px;
+  color: black;
+  /* 可以讓職位顏色稍微淡化 */
+  /* margin-bottom: 20px;
+  text-align: start;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px; */
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* 讓 GitHub 和 Email 之間有間距 */
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.social-media-link i {
+  margin-right: 8px;
+  /* 讓 icon 和文字有間距 */
+}
+
+.social-media-link:hover {
+  color: blue;
 }
 
 /* skill section*/
@@ -185,4 +220,44 @@ hr {
 
 #job-experience {
   margin-bottom: 20px
+}
+
+.side-project {
+  margin-top: 20px;
+}
+
+.a-sideproject {
+  color: black;
+  /* 設定未點擊時的顏色 */
+  text-decoration: none;
+  /* 移除底線，可選 */
+}
+
+.a-sideproject:hover {
+  text-decoration: underline;
+  /* 滑鼠懸停時顯示底線，可選 */
+}
+
+.a-sideproject:visited {
+  color: black !important;
+  /* 讓被點過的連結顏色與未點過的一樣 */
+}
+
+.tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #007bff;
+  /* 設定標籤的背景顏色 */
+  color: white;
+  /* 設定標籤內文字顏色 */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  /* 圓角效果 */
+  display: inline-block;
 }
