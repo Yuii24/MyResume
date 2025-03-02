@@ -278,3 +278,56 @@ hr {
   /* 圓角效果 */
   display: inline-block;
 }
+
+.skill-link {
+  color: blue;
+  /* 設定未點擊時的顏色 */
+  text-decoration: none;
+  /* 移除底線，可選 */
+
+  background: linear-gradient(90deg, blue, blue, blue);
+  background-size: 0 3px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.skill-link:hover {
+  /* text-decoration: underline; */
+  /* 滑鼠懸停時顯示底線，可選 */
+
+  background-size: 100% 3px;
+  color: blue;
+}
+
+.skill-link:visited {
+  color: blue !important;
+  /* 讓被點過的連結顏色與未點過的一樣 */
+}
+
+.each-education {
+  margin-bottom: 10px;
+}
+
+.school {
+  /* 縮排兩格 */
+  font-style: italic;
+  /* 讓學位名稱變成斜體（可選） */
+  font-size: 20px;
+  /* 讓學位名稱稍微小一點 */
+}
+
+.education-degree {
+  margin-top: 10px;
+  margin-left: 2em;
+  /* 縮排兩格 */
+  font-style: italic;
+  /* 讓學位名稱變成斜體（可選） */
+  font-size: 18px;
+  /* 讓學位名稱稍微小一點 */
+}
+
+.pdf-icon {
+  text-align: end;
+}
